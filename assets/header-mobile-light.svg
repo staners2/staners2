@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="340" viewBox="0 0 680 340" role="img" aria-labelledby="title desc">
+  <title id="title">Dima Aratin — DevOps engineer</title>
+  <desc id="desc">Kubernetes, automation and integrations.</desc>
+  <rect width="680" height="340" rx="18" fill="#f5f8fc"/>
+  <path d="M530 0H662Q680 0 680 18V322Q680 340 662 340H530Z" fill="#eaf0f9"/>
+  <g fill="none" stroke="#ccd8e8" stroke-width="2">
+    <path d="M560 46H630V111H600V171H648V284H560"/>
+    <circle cx="560" cy="46" r="6" fill="#f5f8fc"/>
+    <circle cx="560" cy="284" r="6" fill="#f5f8fc"/>
+  </g>
+  <path d="M38 60H72" stroke="#275dcc" stroke-width="4" stroke-linecap="round"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="86" y="67" fill="#526680" font-size="24">@staners2</text>
+    <text x="34" y="154" fill="#182c4a" font-size="68" font-weight="700" letter-spacing="-2">Dima Aratin</text>
+    <text x="38" y="208" fill="#182c4a" font-size="36">DevOps engineer</text>
+    <text x="38" y="280" fill="#526680" font-size="24">Kubernetes, automation</text>
+    <text x="38" y="311" fill="#526680" font-size="24">&amp; integrations.</text>
+  </g>
+</svg>
