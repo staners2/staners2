@@ -33,23 +33,6 @@ I build deployment workflows, automation tools and practical integrations, with 
 | Delivery | GitLab CI/CD, GitHub Actions |
 | Code & data | Python, Go, TypeScript, JavaScript, PostgreSQL |
 
-### [Boosty for Samsung TV](https://github.com/staners2/boosty-samsung-tv)
-
-An unofficial, self-hosted reader and video player for Samsung Tizen TVs and PC browsers. Read full posts, view images and watch subscription videos using a TV remote or a mouse.
-
-[![Boosty for Samsung TV: desktop browser preview showing the feed with demo content](assets/boosty-feed.png)](https://github.com/staners2/boosty-samsung-tv)
-
-<sub>Desktop browser preview with demo content. Native playback requires verification on the target TV.</sub>
-
-- **Deployment:** Docker Compose and a Helm chart for Kubernetes, with persistent storage and configurable routing.
-- **Integration:** phone pairing and a server-side encrypted session vault.
-- **Media:** FFmpeg frame previews, caching and video chapter navigation.
-- **Delivery:** automated tests, GitHub Actions and documented installation paths.
-
-`JavaScript` `Node.js` `FFmpeg` `Tizen` `Docker` `Helm` `Kubernetes`
-
-[Source & setup](https://github.com/staners2/boosty-samsung-tv) · [Screenshots](https://github.com/staners2/boosty-samsung-tv#screenshots)
-
 ---
 
 Have a question about infrastructure, automation or a project here? [Let’s talk on Telegram.](https://t.me/AratinDima)

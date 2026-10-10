@@ -1,8 +1,8 @@
 # Оформление профиля staners2
 
-Оформление ориентировано на людей, нанимающих DevOps-инженеров: краткая специализация, статистика GitHub и один проект — **Boosty for Samsung TV**. Репозиторий профиля: [staners2/staners2](https://github.com/staners2/staners2).
+Оформление ориентировано на людей, нанимающих DevOps-инженеров: краткая специализация, статистика GitHub и используемые технологии. Репозиторий профиля: [staners2/staners2](https://github.com/staners2/staners2).
 
-## Bio и закреплённый проект
+## Bio и закреплённые проекты
 
 Готовый текст для Bio:
 
@@ -12,7 +12,7 @@ DevOps engineer | Kubernetes, CI/CD & automation | Python, Go | Building infrast
 
 Имя: **Dima Aratin**. Telegram и LinkedIn перенесены из текущего публичного профиля. Работодатель, стаж и сертификаты не добавлены.
 
-Закрепить только [boosty-samsung-tv](https://github.com/staners2/boosty-samsung-tv). Описание и topics у него уже заполнены; в README он представлен скриншотом, назначением и четырьмя направлениями работы: развёртывание, интеграция, медиа и доставка изменений.
+В README нет витрины отдельных проектов. Закрепление проектов настраивается отдельно от README.
 
 ## Что показывает статистика
 
@@ -27,7 +27,7 @@ DevOps engineer | Kubernetes, CI/CD & automation | Python, Go | Building infrast
 | График | Contributions из того же окна в 365 дней, сгруппированные по месяцам. Первый и последний месяцы могут быть неполными. |
 | Языки | Основной язык каждого публичного репозитория без форков. Это число репозиториев, а не процент строк кода или оценка навыка. |
 
-Статистика относится ко всему GitHub-профилю. В витрине проектов остаётся только Boosty. Пустые или неполные ответы источников останавливают обновление; опубликованные карточки сохраняются.
+Статистика относится ко всему GitHub-профилю. Пустые или неполные ответы источников останавливают обновление; опубликованные карточки сохраняются.
 
 ## Пересборка и просмотр
 
@@ -42,8 +42,6 @@ python3 -m http.server 8765 --bind 127.0.0.1
 update_stats.py использует стандартную библиотеку Python. Для публичных данных локально токен не обязателен; GITHUB_TOKEN повышает лимиты GitHub API. Токен отправляется только в api.github.com и не записывается в файлы. Статистика собирается из публичных источников; имена приватных репозиториев не запрашиваются.
 
 Цвета и баннеры задаются в tools/build_preview.py; композиция статистики — в tools/update_stats.py. SVG являются производными файлами: менять генераторы и пересобирать. Изображения для узких экранов выбираются через picture при ширине до 600 px.
-
-Скриншот assets/boosty-feed.png взят без изменений из публичного README Boosty. Он показывает настольный браузер с демонстрационными материалами; работа нативного плеера на физическом TV этим скриншотом не подтверждается.
 
 ## Ежедневное обновление
 
@@ -80,7 +78,6 @@ python3 -m unittest discover -s tools -p 'test_*.py'
 
 - [Публичный профиль](https://github.com/staners2)
 - [Публичный календарь](https://github.com/users/staners2/contributions)
-- [Boosty: README и скриншоты](https://github.com/staners2/boosty-samsung-tv)
 - [GitHub: contributions и приватная активность](https://docs.github.com/en/account-and-profile/concepts/contributions-on-your-profile)
 - [GitHub: поиск коммитов](https://docs.github.com/en/search-github/searching-on-github/searching-commits)
 - [GitHub: profile README](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme)
