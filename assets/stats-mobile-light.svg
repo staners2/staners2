@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="680" height="1100" viewBox="0 0 680 1100" role="img" aria-labelledby="title desc">
 <title id="title">GitHub activity for Dima Aratin</title>
-<desc id="desc">883 contributions in 365 days, 262 publicly indexed commits, 18 non-fork public repositories and 13 public pull requests. Commit and pull request counts cover all time. Updated 2026-10-25.</desc>
+<desc id="desc">879 contributions in 365 days, 148 publicly indexed commits, 7 non-fork public repositories and 11 public pull requests. Commit and pull request counts cover all time. Updated 2026-10-26.</desc>
 <rect width="680" height="1100" rx="18" fill="#f5f8fc"/>
 <g font-family="Arial, Helvetica, sans-serif">
 <text x="32" y="48" font-size="32" fill="#182c4a" font-weight="700" text-anchor="start">GitHub at a glance</text>
-<text x="32" y="78" font-size="21" fill="#526680" font-weight="400" text-anchor="start">Updated 2026-10-25</text>
+<text x="32" y="78" font-size="21" fill="#526680" font-weight="400" text-anchor="start">Updated 2026-10-26</text>
 <rect x="28" y="106" width="296" height="137" rx="10" fill="#eaf0f9"/>
-<text x="48" y="156" font-size="44" fill="#275dcc" font-weight="700" text-anchor="start">883</text>
+<text x="48" y="156" font-size="44" fill="#275dcc" font-weight="700" text-anchor="start">879</text>
 <text x="48" y="193" font-size="24" fill="#182c4a" font-weight="600" text-anchor="start">Contributions</text>
 <text x="48" y="222" font-size="20" fill="#526680" font-weight="400" text-anchor="start">Last 365 days</text>
 <rect x="350" y="106" width="296" height="137" rx="10" fill="#eaf0f9"/>
-<text x="370" y="156" font-size="44" fill="#275dcc" font-weight="700" text-anchor="start">262</text>
+<text x="370" y="156" font-size="44" fill="#275dcc" font-weight="700" text-anchor="start">148</text>
 <text x="370" y="193" font-size="24" fill="#182c4a" font-weight="600" text-anchor="start">Public commits</text>
 <text x="370" y="222" font-size="20" fill="#526680" font-weight="400" text-anchor="start">Indexed · all time</text>
 <rect x="28" y="261" width="296" height="137" rx="10" fill="#eaf0f9"/>
-<text x="48" y="311" font-size="44" fill="#275dcc" font-weight="700" text-anchor="start">18</text>
+<text x="48" y="311" font-size="44" fill="#275dcc" font-weight="700" text-anchor="start">7</text>
 <text x="48" y="348" font-size="24" fill="#182c4a" font-weight="600" text-anchor="start">Original repos</text>
 <text x="48" y="377" font-size="20" fill="#526680" font-weight="400" text-anchor="start">Public · no forks</text>
 <rect x="350" y="261" width="296" height="137" rx="10" fill="#eaf0f9"/>
-<text x="370" y="311" font-size="44" fill="#275dcc" font-weight="700" text-anchor="start">13</text>
+<text x="370" y="311" font-size="44" fill="#275dcc" font-weight="700" text-anchor="start">11</text>
 <text x="370" y="348" font-size="24" fill="#182c4a" font-weight="600" text-anchor="start">Pull requests</text>
 <text x="370" y="377" font-size="20" fill="#526680" font-weight="400" text-anchor="start">Public · all time</text>
 <text x="38" y="463" font-size="30" fill="#182c4a" font-weight="700" text-anchor="start">Contribution activity</text>
@@ -27,15 +27,15 @@
 <text x="56.07692307692308" y="730" font-size="22" fill="#526680" font-weight="400" text-anchor="middle">Oct</text>
 <rect x="84.2" y="700.0" width="36.2" height="2.0" rx="4" fill="#275dcc" opacity="0.2"><title>2025-11: 0 contributions</title></rect>
 <rect x="130.3" y="700.0" width="36.2" height="2.0" rx="4" fill="#275dcc" opacity="0.2"><title>2025-12: 0 contributions</title></rect>
-<rect x="176.5" y="693.8" width="36.2" height="8.2" rx="4" fill="#275dcc" opacity="0.9"><title>2026-01: 14 contributions</title></rect>
-<text x="194.53846153846152" y="683.7931034482758" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">14</text>
+<rect x="176.5" y="694.4" width="36.2" height="7.6" rx="4" fill="#275dcc" opacity="0.9"><title>2026-01: 13 contributions</title></rect>
+<text x="194.53846153846152" y="684.3793103448276" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">13</text>
 <text x="194.53846153846152" y="730" font-size="22" fill="#526680" font-weight="400" text-anchor="middle">Jan</text>
 <rect x="222.6" y="582.4" width="36.2" height="119.6" rx="4" fill="#275dcc" opacity="0.9"><title>2026-02: 204 contributions</title></rect>
 <text x="240.69230769230768" y="572.4137931034483" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">204</text>
 <rect x="268.8" y="532.0" width="36.2" height="170.0" rx="4" fill="#275dcc" opacity="0.9"><title>2026-03: 290 contributions</title></rect>
 <text x="286.84615384615387" y="522.0" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">290</text>
-<rect x="314.9" y="588.3" width="36.2" height="113.7" rx="4" fill="#275dcc" opacity="0.9"><title>2026-04: 194 contributions</title></rect>
-<text x="333.0" y="578.2758620689656" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">194</text>
+<rect x="314.9" y="588.9" width="36.2" height="113.1" rx="4" fill="#275dcc" opacity="0.9"><title>2026-04: 193 contributions</title></rect>
+<text x="333.0" y="578.8620689655172" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">193</text>
 <text x="333.0" y="730" font-size="22" fill="#526680" font-weight="400" text-anchor="middle">Apr</text>
 <rect x="361.1" y="693.2" width="36.2" height="8.8" rx="4" fill="#275dcc" opacity="0.9"><title>2026-05: 15 contributions</title></rect>
 <text x="379.1538461538462" y="683.2068965517242" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">15</text>
@@ -44,47 +44,35 @@
 <rect x="453.4" y="665.7" width="36.2" height="36.3" rx="4" fill="#275dcc" opacity="0.9"><title>2026-07: 62 contributions</title></rect>
 <text x="471.46153846153845" y="655.6551724137931" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">62</text>
 <text x="471.46153846153845" y="730" font-size="22" fill="#526680" font-weight="400" text-anchor="middle">Jul</text>
-<rect x="499.5" y="693.2" width="36.2" height="8.8" rx="4" fill="#275dcc" opacity="0.9"><title>2026-08: 15 contributions</title></rect>
-<text x="517.6153846153846" y="683.2068965517242" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">15</text>
+<rect x="499.5" y="695.0" width="36.2" height="7.0" rx="4" fill="#275dcc" opacity="0.9"><title>2026-08: 12 contributions</title></rect>
+<text x="517.6153846153846" y="684.9655172413793" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">12</text>
 <rect x="545.7" y="699.1" width="36.2" height="2.9" rx="4" fill="#275dcc" opacity="0.9"><title>2026-09: 5 contributions</title></rect>
 <text x="563.7692307692307" y="689.0689655172414" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">5</text>
-<rect x="591.8" y="673.9" width="36.2" height="28.1" rx="4" fill="#275dcc" opacity="0.9"><title>2026-10: 48 contributions</title></rect>
-<text x="609.9230769230769" y="663.8620689655172" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">48</text>
+<rect x="591.8" y="673.3" width="36.2" height="28.7" rx="4" fill="#275dcc" opacity="0.9"><title>2026-10: 49 contributions</title></rect>
+<text x="609.9230769230769" y="663.2758620689655" font-size="20" fill="#526680" font-weight="400" text-anchor="middle">49</text>
 <text x="609.9230769230769" y="730" font-size="22" fill="#526680" font-weight="400" text-anchor="middle">Oct</text>
-<text x="38" y="768" font-size="21" fill="#526680" font-weight="400" text-anchor="start">89 active days · 2025-10-26 — 2026-10-25</text>
+<text x="38" y="768" font-size="21" fill="#526680" font-weight="400" text-anchor="start">90 active days · 2025-10-27 — 2026-10-26</text>
 <text x="38" y="824" font-size="30" fill="#182c4a" font-weight="700" text-anchor="start">Repository languages</text>
 <text x="38" y="853" font-size="21" fill="#526680" font-weight="400" text-anchor="start">Main language · non-fork repos</text>
-<text x="38" y="897" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">Python</text>
-<text x="318" y="897" font-size="21" fill="#526680" font-weight="400" text-anchor="end">7 repos</text>
+<text x="38" y="897" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">Go</text>
+<text x="318" y="897" font-size="21" fill="#526680" font-weight="400" text-anchor="end">2 repos</text>
 <rect x="38" y="909" width="280" height="5" rx="2.5" fill="#ccd8e8"/>
 <rect x="38" y="909" width="280.0" height="5" rx="2.5" fill="#275dcc"/>
-<text x="38" y="948" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">C#</text>
+<text x="38" y="948" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">Python</text>
 <text x="318" y="948" font-size="21" fill="#526680" font-weight="400" text-anchor="end">2 repos</text>
 <rect x="38" y="960" width="280" height="5" rx="2.5" fill="#ccd8e8"/>
-<rect x="38" y="960" width="80.0" height="5" rx="2.5" fill="#275dcc"/>
-<text x="38" y="999" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">Go</text>
-<text x="318" y="999" font-size="21" fill="#526680" font-weight="400" text-anchor="end">2 repos</text>
+<rect x="38" y="960" width="280.0" height="5" rx="2.5" fill="#275dcc"/>
+<text x="38" y="999" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">JavaScript</text>
+<text x="318" y="999" font-size="21" fill="#526680" font-weight="400" text-anchor="end">1 repo</text>
 <rect x="38" y="1011" width="280" height="5" rx="2.5" fill="#ccd8e8"/>
-<rect x="38" y="1011" width="80.0" height="5" rx="2.5" fill="#275dcc"/>
-<text x="38" y="1050" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">JavaScript</text>
+<rect x="38" y="1011" width="140.0" height="5" rx="2.5" fill="#275dcc"/>
+<text x="38" y="1050" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">Shell</text>
 <text x="318" y="1050" font-size="21" fill="#526680" font-weight="400" text-anchor="end">1 repo</text>
 <rect x="38" y="1062" width="280" height="5" rx="2.5" fill="#ccd8e8"/>
-<rect x="38" y="1062" width="40.0" height="5" rx="2.5" fill="#275dcc"/>
-<text x="360" y="897" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">Kotlin</text>
+<rect x="38" y="1062" width="140.0" height="5" rx="2.5" fill="#275dcc"/>
+<text x="360" y="897" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">Swift</text>
 <text x="640" y="897" font-size="21" fill="#526680" font-weight="400" text-anchor="end">1 repo</text>
 <rect x="360" y="909" width="280" height="5" rx="2.5" fill="#ccd8e8"/>
-<rect x="360" y="909" width="40.0" height="5" rx="2.5" fill="#275dcc"/>
-<text x="360" y="948" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">PHP</text>
-<text x="640" y="948" font-size="21" fill="#526680" font-weight="400" text-anchor="end">1 repo</text>
-<rect x="360" y="960" width="280" height="5" rx="2.5" fill="#ccd8e8"/>
-<rect x="360" y="960" width="40.0" height="5" rx="2.5" fill="#275dcc"/>
-<text x="360" y="999" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">Shell</text>
-<text x="640" y="999" font-size="21" fill="#526680" font-weight="400" text-anchor="end">1 repo</text>
-<rect x="360" y="1011" width="280" height="5" rx="2.5" fill="#ccd8e8"/>
-<rect x="360" y="1011" width="40.0" height="5" rx="2.5" fill="#275dcc"/>
-<text x="360" y="1050" font-size="24" fill="#182c4a" font-weight="400" text-anchor="start">Other</text>
-<text x="640" y="1050" font-size="21" fill="#526680" font-weight="400" text-anchor="end">2 repos</text>
-<rect x="360" y="1062" width="280" height="5" rx="2.5" fill="#ccd8e8"/>
-<rect x="360" y="1062" width="80.0" height="5" rx="2.5" fill="#275dcc"/>
+<rect x="360" y="909" width="140.0" height="5" rx="2.5" fill="#275dcc"/>
 </g>
 </svg>
