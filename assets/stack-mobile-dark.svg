@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="276" viewBox="0 0 680 276" role="img" aria-labelledby="title desc">
+<title id="title">Tools I work with</title>
+<desc id="desc">Illustrated icons for Kubernetes, Docker, GitLab CI, GitHub Actions, Python, Go and PostgreSQL.</desc>
+<rect width="680" height="276" rx="16" fill="#14233b"/>
+<g transform="translate(71 22) scale(1.2)" fill="none" stroke="#83b1ff" color="#83b1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 3 42 13V35L24 45 6 35V13Z"/><circle cx="24" cy="24" r="8"/><path d="M24 7V16M24 32V41M9 15 17 20M31 28 39 33M9 33 17 28M31 20 39 15M7 24H16M32 24H41"/></g>
+<text x="100" y="109" fill="#edf3fc" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Kubernetes</text>
+<g transform="translate(231 22) scale(1.2)" fill="none" stroke="#83b1ff" color="#83b1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 25H36Q40 25 42 21L46 23Q44 30 36 31Q31 41 19 41Q7 41 5 25Z"/><path d="M8 17H15V24H8ZM17 17H24V24H17ZM26 17H33V24H26ZM17 8H24V15H17ZM26 8H33V15H26Z"/><circle cx="12" cy="31" r="1"/></g>
+<text x="260" y="109" fill="#edf3fc" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Docker</text>
+<g transform="translate(391 22) scale(1.2)" fill="none" stroke="#83b1ff" color="#83b1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 43 4 28 9 5 17 20H31L39 5 44 28Z"/><path d="M4 28 17 20 24 43 31 20 44 28M9 5 17 20M39 5 31 20"/></g>
+<text x="420" y="109" fill="#edf3fc" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">GitLab CI</text>
+<g transform="translate(551 22) scale(1.2)" fill="none" stroke="#83b1ff" color="#83b1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="9" r="6"/><circle cx="37" cy="24" r="6"/><circle cx="10" cy="39" r="6"/><path d="M10 15V33M16 9H21Q27 9 27 16V17Q27 24 31 24M16 39H21Q27 39 27 32V31Q27 24 31 24"/></g>
+<text x="580" y="109" fill="#edf3fc" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Actions</text>
+<g transform="translate(151 154) scale(1.2)" fill="none" stroke="#83b1ff" color="#83b1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24H12Q6 24 6 17V12Q6 5 13 5H27Q34 5 34 12V18H20Q14 18 14 25V33H7M24 24H36Q42 24 42 31V36Q42 43 35 43H21Q14 43 14 36V30H28Q34 30 34 23V15H41"/><circle cx="15" cy="11" r="1"/><circle cx="33" cy="37" r="1"/></g>
+<text x="180" y="241" fill="#edf3fc" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Python</text>
+<g transform="translate(311 154) scale(1.2)" fill="none" stroke="#83b1ff" color="#83b1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15H12M0 23H9M4 31H12"/><text x="13" y="34" stroke="none" fill="currentColor" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" font-style="italic">Go</text></g>
+<text x="340" y="241" fill="#edf3fc" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Go</text>
+<g transform="translate(471 154) scale(1.2)" fill="none" stroke="#83b1ff" color="#83b1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5Q9 3 7 17Q5 29 14 35L18 29M24 5Q39 3 41 17Q43 29 34 35L30 29M18 15Q24 11 30 15V36Q30 43 24 43Q20 43 20 38M18 15V27Q18 32 24 32Q30 32 34 28M12 16 15 25M36 16 33 25"/><circle cx="20" cy="20" r="1"/><circle cx="28" cy="20" r="1"/></g>
+<text x="500" y="241" fill="#edf3fc" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">PostgreSQL</text>
+</svg>

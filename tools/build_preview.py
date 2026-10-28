@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build theme-aware SVG headers and a local preview using GitHub-rendered Markdown."""
+"""Build illustrated SVG assets and a local preview using GitHub-rendered Markdown."""
 
 import json
 from pathlib import Path
@@ -22,80 +22,102 @@ PALETTES = {
 
 
 def header(palette: dict[str, str], compact: bool = False) -> str:
-    if compact:
-        return f'''<svg xmlns="http://www.w3.org/2000/svg" width="680" height="340" viewBox="0 0 680 340" role="img" aria-labelledby="title desc">
+    width, height = (680, 560) if compact else (1200, 380)
+    left = 38 if compact else 52
+    art_position = "translate(60 250)" if compact else "translate(650 46)"
+    route = "M144 136H178Q198 136 198 116V104Q198 84 218 84H250V110H324Q346 110 346 132V186Q346 208 368 208H417"
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
   <title id="title">Dima Aratin — DevOps engineer</title>
-  <desc id="desc">Kubernetes, automation and integrations.</desc>
-  <rect width="680" height="340" rx="18" fill="{palette['base']}"/>
-  <path d="M530 0H662Q680 0 680 18V322Q680 340 662 340H530Z" fill="{palette['panel']}"/>
-  <g fill="none" stroke="{palette['line']}" stroke-width="2">
-    <path d="M560 46H630V111H600V171H648V284H560"/>
-    <circle cx="560" cy="46" r="6" fill="{palette['base']}"/>
-    <circle cx="560" cy="284" r="6" fill="{palette['base']}"/>
-  </g>
-  <path d="M38 60H72" stroke="{palette['accent']}" stroke-width="4" stroke-linecap="round"/>
-  <g font-family="Arial, Helvetica, sans-serif">
-    <text x="86" y="67" fill="{palette['muted']}" font-size="24">@staners2</text>
-    <text x="34" y="154" fill="{palette['ink']}" font-size="68" font-weight="700" letter-spacing="-2">Dima Aratin</text>
-    <text x="38" y="208" fill="{palette['ink']}" font-size="36">DevOps engineer</text>
-    <text x="38" y="280" fill="{palette['muted']}" font-size="24">Kubernetes, automation</text>
-    <text x="38" y="311" fill="{palette['muted']}" font-size="24">&amp; integrations.</text>
-  </g>
-</svg>
-'''
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
-  <title id="title">Dima Aratin — DevOps engineer</title>
-  <desc id="desc">Kubernetes, automation and integrations. A diagram connects code, a delivery pipeline and a Kubernetes cluster.</desc>
+  <desc id="desc">Kubernetes, automation and integrations. An illustrated delivery path connects a code terminal, a container image and a Kubernetes cluster.</desc>
+  <style>
+    .delivery-signal {{ stroke-dasharray:6 94; animation:delivery 8s linear infinite; }}
+    @keyframes delivery {{
+      0% {{ stroke-dashoffset:100; opacity:0; }}
+      8%,88% {{ opacity:1; }}
+      100% {{ stroke-dashoffset:0; opacity:0; }}
+    }}
+    @media (prefers-reduced-motion:reduce) {{ .delivery-signal {{ animation:none; opacity:0; }} }}
+  </style>
   <defs>
-    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1" fill="{palette['line']}" opacity=".52"/>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="{palette['line']}" opacity=".55"/>
     </pattern>
+    <g id="container" stroke="{palette['accent']}" stroke-width="1.7" stroke-linejoin="round">
+      <path d="M-42-3V39L0 62V20Z" fill="{palette['panel']}"/>
+      <path d="M42-3V39L0 62V20Z" fill="{palette['base']}"/>
+      <path d="M0-26 42-3 0 20-42-3Z" fill="{palette['panel']}"/>
+      <path d="M0-26 42-3 0 20-42-3Z" fill="{palette['accent']}" opacity=".12" stroke="none"/>
+      <path d="M-28 7V33M-14 15V41M14 15V41M28 7V33" fill="none" opacity=".5"/>
+      <path d="M-21-15 21 8" fill="none" opacity=".5"/>
+    </g>
   </defs>
-  <rect width="1200" height="340" rx="18" fill="{palette['base']}"/>
-  <path d="M670 0H1182Q1200 0 1200 18V322Q1200 340 1182 340H670Z" fill="{palette['panel']}"/>
-  <path d="M670 0H1182Q1200 0 1200 18V322Q1200 340 1182 340H670Z" fill="url(#grid)"/>
-  <path d="M56 64H98" stroke="{palette['accent']}" stroke-width="4" stroke-linecap="round"/>
+  <rect x=".75" y=".75" width="{width - 1.5}" height="{height - 1.5}" rx="20" fill="{palette['base']}" stroke="{palette['line']}" stroke-width="1.5"/>
+  <rect x="{24 if compact else 632}" y="{248 if compact else 24}" width="{width - (48 if compact else 656)}" height="{height - (272 if compact else 48)}" rx="16" fill="{palette['panel']}"/>
+  <rect x="{24 if compact else 632}" y="{248 if compact else 24}" width="{width - (48 if compact else 656)}" height="{height - (272 if compact else 48)}" rx="16" fill="url(#grid)"/>
+  <path d="M{left} {52 if compact else 65}h34" stroke="{palette['accent']}" stroke-width="4" stroke-linecap="round"/>
   <g font-family="Arial, Helvetica, sans-serif">
-    <text x="112" y="70" fill="{palette['muted']}" font-size="19">@staners2</text>
-    <text x="52" y="155" fill="{palette['ink']}" font-size="66" font-weight="700" letter-spacing="-2">Dima Aratin</text>
-    <text x="56" y="205" fill="{palette['ink']}" font-size="30">DevOps engineer</text>
-    <text x="56" y="276" fill="{palette['muted']}" font-size="21">Kubernetes, automation &amp; integrations.</text>
-    <text x="736" y="72" fill="{palette['muted']}" font-size="17">Code</text>
-    <text x="920" y="72" fill="{palette['muted']}" font-size="17">CI/CD</text>
-    <text x="928" y="222" fill="{palette['muted']}" font-size="17">Kubernetes</text>
+    <text x="{left + 48}" y="{59 if compact else 72}" fill="{palette['muted']}" font-size="{23 if compact else 19}">@staners2</text>
+    <text x="{left - 3}" y="{130 if compact else 156}" fill="{palette['ink']}" font-size="{66 if compact else 68}" font-weight="700" letter-spacing="-2">Dima Aratin</text>
+    <text x="{left}" y="{177 if compact else 210}" fill="{palette['ink']}" font-size="{32 if compact else 31}">DevOps engineer</text>
+    <text x="{left}" y="{221 if compact else 285}" fill="{palette['muted']}" font-size="{23 if compact else 22}">Kubernetes, automation &amp; integrations.</text>
   </g>
-  <g fill="none" stroke="{palette['accent']}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="714" y="92" width="90" height="68" rx="10" fill="{palette['base']}"/>
-    <circle cx="744" cy="112" r="5"/>
-    <circle cx="744" cy="141" r="5"/>
-    <circle cx="776" cy="112" r="5"/>
-    <path d="M744 117V136M771 112H763Q754 112 754 124V127Q754 134 744 134"/>
-    <path d="M804 126H903M897 121L903 126L897 131"/>
-    <rect x="912" y="92" width="90" height="68" rx="10" fill="{palette['base']}"/>
-    <path d="M930 110H951M930 125H970M930 140H961"/>
-    <path d="M1002 126H1084Q1098 126 1098 140V215Q1098 238 1075 238H1002M1008 233L1002 238L1008 243"/>
-    <path d="M826 215V271M826 243H912M860 243V215M892 243V271"/>
+  <g transform="{art_position}">
+    <g fill="{palette['muted']}" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">
+      <text x="84" y="32">Code</text>
+      <text x="250" y="32">CI/CD</text>
+      <text x="414" y="286">Kubernetes</text>
+    </g>
+    <path d="{route}" fill="none" stroke="{palette['accent']}" stroke-width="2.5" opacity=".38"/>
+    <path d="{route}" pathLength="100" class="delivery-signal" fill="none" stroke="{palette['warm']}" stroke-width="4" stroke-linecap="round"/>
+    <g transform="rotate(-7 84 124)">
+      <rect x="28" y="76" width="132" height="112" rx="12" fill="{palette['line']}"/>
+      <rect x="20" y="68" width="132" height="112" rx="12" fill="{palette['base']}" stroke="{palette['accent']}" stroke-width="1.8"/>
+      <path d="M21 95H151" stroke="{palette['line']}" stroke-width="1.5"/>
+      <g fill="{palette['line']}"><circle cx="35" cy="82" r="3"/><circle cx="47" cy="82" r="3"/><circle cx="59" cy="82" r="3"/></g>
+      <path d="M38 114 48 122 38 130M59 131H83" fill="none" stroke="{palette['warm']}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M38 149H95M38 161H75" stroke="{palette['accent']}" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+    </g>
+    <ellipse cx="250" cy="166" rx="60" ry="16" fill="{palette['line']}" opacity=".4"/>
+    <use href="#container" transform="translate(250 87) scale(1.1)"/>
+    <path d="M233 82 244 88 267 75" fill="none" stroke="{palette['warm']}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M324 198V211L414 263 504 211V198" fill="{palette['base']}" stroke="{palette['line']}" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M414 147 504 198 414 250 324 198Z" fill="{palette['base']}" stroke="{palette['accent']}" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M369 173 459 224M369 224 459 173" stroke="{palette['line']}" stroke-width="1.5"/>
+    <use href="#container" transform="translate(383 155) scale(.65)"/>
+    <use href="#container" transform="translate(444 189) scale(.65)"/>
+    <use href="#container" transform="translate(383 216) scale(.65)"/>
+    <g fill="{palette['warm']}"><circle cx="399" cy="171" r="2.5"/><circle cx="460" cy="205" r="2.5"/><circle cx="399" cy="232" r="2.5"/></g>
   </g>
-  <g fill="{palette['base']}" stroke="{palette['line']}" stroke-width="2">
-    <rect x="714" y="193" width="146" height="43" rx="7"/>
-    <rect x="714" y="255" width="178" height="43" rx="7"/>
-    <rect x="912" y="236" width="90" height="62" rx="10" stroke="{palette['accent']}" stroke-width="2.5"/>
-  </g>
-  <g font-family="Arial, Helvetica, sans-serif" font-size="16" fill="{palette['muted']}">
-    <text x="732" y="220">Containers</text>
-    <text x="732" y="282">Helm releases</text>
-  </g>
-  <g fill="{palette['accent']}">
-    <rect x="930" y="253" width="12" height="12" rx="2"/>
-    <rect x="952" y="253" width="12" height="12" rx="2"/>
-    <rect x="974" y="253" width="12" height="12" rx="2"/>
-    <rect x="930" y="276" width="12" height="6" rx="2" opacity=".5"/>
-    <rect x="952" y="276" width="12" height="6" rx="2" opacity=".5"/>
-    <rect x="974" y="276" width="12" height="6" rx="2" opacity=".5"/>
-  </g>
-  <circle cx="981" cy="111" r="4" fill="{palette['warm']}"/>
 </svg>
 '''
+
+
+def technology_strip(palette: dict[str, str], compact: bool = False) -> str:
+    icons = (
+        ("Kubernetes", '<path d="M24 3 42 13V35L24 45 6 35V13Z"/><circle cx="24" cy="24" r="8"/><path d="M24 7V16M24 32V41M9 15 17 20M31 28 39 33M9 33 17 28M31 20 39 15M7 24H16M32 24H41"/>'),
+        ("Docker", '<path d="M5 25H36Q40 25 42 21L46 23Q44 30 36 31Q31 41 19 41Q7 41 5 25Z"/><path d="M8 17H15V24H8ZM17 17H24V24H17ZM26 17H33V24H26ZM17 8H24V15H17ZM26 8H33V15H26Z"/><circle cx="12" cy="31" r="1"/>'),
+        ("GitLab CI", '<path d="M24 43 4 28 9 5 17 20H31L39 5 44 28Z"/><path d="M4 28 17 20 24 43 31 20 44 28M9 5 17 20M39 5 31 20"/>'),
+        ("Actions", '<circle cx="10" cy="9" r="6"/><circle cx="37" cy="24" r="6"/><circle cx="10" cy="39" r="6"/><path d="M10 15V33M16 9H21Q27 9 27 16V17Q27 24 31 24M16 39H21Q27 39 27 32V31Q27 24 31 24"/>'),
+        ("Python", '<path d="M24 24H12Q6 24 6 17V12Q6 5 13 5H27Q34 5 34 12V18H20Q14 18 14 25V33H7M24 24H36Q42 24 42 31V36Q42 43 35 43H21Q14 43 14 36V30H28Q34 30 34 23V15H41"/><circle cx="15" cy="11" r="1"/><circle cx="33" cy="37" r="1"/>'),
+        ("Go", '<path d="M2 15H12M0 23H9M4 31H12"/><text x="13" y="34" stroke="none" fill="currentColor" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" font-style="italic">Go</text>'),
+        ("PostgreSQL", '<path d="M24 5Q9 3 7 17Q5 29 14 35L18 29M24 5Q39 3 41 17Q43 29 34 35L30 29M18 15Q24 11 30 15V36Q30 43 24 43Q20 43 20 38M18 15V27Q18 32 24 32Q30 32 34 28M12 16 15 25M36 16 33 25"/><circle cx="20" cy="20" r="1"/><circle cx="28" cy="20" r="1"/>'),
+    )
+    width, height = (680, 276) if compact else (1200, 148)
+    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
+             '<title id="title">Tools I work with</title>',
+             '<desc id="desc">Illustrated icons for Kubernetes, Docker, GitLab CI, GitHub Actions, Python, Go and PostgreSQL.</desc>',
+             f'<rect width="{width}" height="{height}" rx="16" fill="{palette["base"]}"/>']
+    for index, (label, drawing) in enumerate(icons):
+        if compact:
+            row, column = divmod(index, 4)
+            x = (100 if row == 0 else 180) + column * 160
+            y = 22 + row * 132
+        else:
+            x, y = 96 + index * 168, 22
+        parts.append(f'<g transform="translate({x - 29} {y}) scale(1.2)" fill="none" stroke="{palette["accent"]}" color="{palette["accent"]}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{drawing}</g>')
+        parts.append(f'<text x="{x}" y="{y + 87}" fill="{palette["ink"]}" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">{label}</text>')
+    parts.append('</svg>\n')
+    return '\n'.join(parts)
 
 
 PREVIEW = '''<!doctype html>
@@ -195,8 +217,10 @@ def main() -> None:
     for theme, palette in PALETTES.items():
         (assets / f"header-{theme}.svg").write_text(header(palette))
         (assets / f"header-mobile-{theme}.svg").write_text(header(palette, compact=True))
+        (assets / f"stack-{theme}.svg").write_text(technology_strip(palette))
+        (assets / f"stack-mobile-{theme}.svg").write_text(technology_strip(palette, compact=True))
     (ROOT / "preview.html").write_text(PREVIEW.replace("__MARKDOWN__", rendered))
-    print("Built four SVG headers and preview.html")
+    print("Built four animated headers, four technology strips and preview.html")
 
 
 if __name__ == "__main__":

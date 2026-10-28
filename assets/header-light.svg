@@ -1,52 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
   <title id="title">Dima Aratin — DevOps engineer</title>
-  <desc id="desc">Kubernetes, automation and integrations. A diagram connects code, a delivery pipeline and a Kubernetes cluster.</desc>
+  <desc id="desc">Kubernetes, automation and integrations. An illustrated delivery path connects a code terminal, a container image and a Kubernetes cluster.</desc>
+  <style>
+    .delivery-signal { stroke-dasharray:6 94; animation:delivery 8s linear infinite; }
+    @keyframes delivery {
+      0% { stroke-dashoffset:100; opacity:0; }
+      8%,88% { opacity:1; }
+      100% { stroke-dashoffset:0; opacity:0; }
+    }
+    @media (prefers-reduced-motion:reduce) { .delivery-signal { animation:none; opacity:0; } }
+  </style>
   <defs>
-    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1" fill="#ccd8e8" opacity=".52"/>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#ccd8e8" opacity=".55"/>
     </pattern>
+    <g id="container" stroke="#275dcc" stroke-width="1.7" stroke-linejoin="round">
+      <path d="M-42-3V39L0 62V20Z" fill="#eaf0f9"/>
+      <path d="M42-3V39L0 62V20Z" fill="#f5f8fc"/>
+      <path d="M0-26 42-3 0 20-42-3Z" fill="#eaf0f9"/>
+      <path d="M0-26 42-3 0 20-42-3Z" fill="#275dcc" opacity=".12" stroke="none"/>
+      <path d="M-28 7V33M-14 15V41M14 15V41M28 7V33" fill="none" opacity=".5"/>
+      <path d="M-21-15 21 8" fill="none" opacity=".5"/>
+    </g>
   </defs>
-  <rect width="1200" height="340" rx="18" fill="#f5f8fc"/>
-  <path d="M670 0H1182Q1200 0 1200 18V322Q1200 340 1182 340H670Z" fill="#eaf0f9"/>
-  <path d="M670 0H1182Q1200 0 1200 18V322Q1200 340 1182 340H670Z" fill="url(#grid)"/>
-  <path d="M56 64H98" stroke="#275dcc" stroke-width="4" stroke-linecap="round"/>
+  <rect x=".75" y=".75" width="1198.5" height="378.5" rx="20" fill="#f5f8fc" stroke="#ccd8e8" stroke-width="1.5"/>
+  <rect x="632" y="24" width="544" height="332" rx="16" fill="#eaf0f9"/>
+  <rect x="632" y="24" width="544" height="332" rx="16" fill="url(#grid)"/>
+  <path d="M52 65h34" stroke="#275dcc" stroke-width="4" stroke-linecap="round"/>
   <g font-family="Arial, Helvetica, sans-serif">
-    <text x="112" y="70" fill="#526680" font-size="19">@staners2</text>
-    <text x="52" y="155" fill="#182c4a" font-size="66" font-weight="700" letter-spacing="-2">Dima Aratin</text>
-    <text x="56" y="205" fill="#182c4a" font-size="30">DevOps engineer</text>
-    <text x="56" y="276" fill="#526680" font-size="21">Kubernetes, automation &amp; integrations.</text>
-    <text x="736" y="72" fill="#526680" font-size="17">Code</text>
-    <text x="920" y="72" fill="#526680" font-size="17">CI/CD</text>
-    <text x="928" y="222" fill="#526680" font-size="17">Kubernetes</text>
+    <text x="100" y="72" fill="#526680" font-size="19">@staners2</text>
+    <text x="49" y="156" fill="#182c4a" font-size="68" font-weight="700" letter-spacing="-2">Dima Aratin</text>
+    <text x="52" y="210" fill="#182c4a" font-size="31">DevOps engineer</text>
+    <text x="52" y="285" fill="#526680" font-size="22">Kubernetes, automation &amp; integrations.</text>
   </g>
-  <g fill="none" stroke="#275dcc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="714" y="92" width="90" height="68" rx="10" fill="#f5f8fc"/>
-    <circle cx="744" cy="112" r="5"/>
-    <circle cx="744" cy="141" r="5"/>
-    <circle cx="776" cy="112" r="5"/>
-    <path d="M744 117V136M771 112H763Q754 112 754 124V127Q754 134 744 134"/>
-    <path d="M804 126H903M897 121L903 126L897 131"/>
-    <rect x="912" y="92" width="90" height="68" rx="10" fill="#f5f8fc"/>
-    <path d="M930 110H951M930 125H970M930 140H961"/>
-    <path d="M1002 126H1084Q1098 126 1098 140V215Q1098 238 1075 238H1002M1008 233L1002 238L1008 243"/>
-    <path d="M826 215V271M826 243H912M860 243V215M892 243V271"/>
+  <g transform="translate(650 46)">
+    <g fill="#526680" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">
+      <text x="84" y="32">Code</text>
+      <text x="250" y="32">CI/CD</text>
+      <text x="414" y="286">Kubernetes</text>
+    </g>
+    <path d="M144 136H178Q198 136 198 116V104Q198 84 218 84H250V110H324Q346 110 346 132V186Q346 208 368 208H417" fill="none" stroke="#275dcc" stroke-width="2.5" opacity=".38"/>
+    <path d="M144 136H178Q198 136 198 116V104Q198 84 218 84H250V110H324Q346 110 346 132V186Q346 208 368 208H417" pathLength="100" class="delivery-signal" fill="none" stroke="#aa6715" stroke-width="4" stroke-linecap="round"/>
+    <g transform="rotate(-7 84 124)">
+      <rect x="28" y="76" width="132" height="112" rx="12" fill="#ccd8e8"/>
+      <rect x="20" y="68" width="132" height="112" rx="12" fill="#f5f8fc" stroke="#275dcc" stroke-width="1.8"/>
+      <path d="M21 95H151" stroke="#ccd8e8" stroke-width="1.5"/>
+      <g fill="#ccd8e8"><circle cx="35" cy="82" r="3"/><circle cx="47" cy="82" r="3"/><circle cx="59" cy="82" r="3"/></g>
+      <path d="M38 114 48 122 38 130M59 131H83" fill="none" stroke="#aa6715" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M38 149H95M38 161H75" stroke="#275dcc" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+    </g>
+    <ellipse cx="250" cy="166" rx="60" ry="16" fill="#ccd8e8" opacity=".4"/>
+    <use href="#container" transform="translate(250 87) scale(1.1)"/>
+    <path d="M233 82 244 88 267 75" fill="none" stroke="#aa6715" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M324 198V211L414 263 504 211V198" fill="#f5f8fc" stroke="#ccd8e8" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M414 147 504 198 414 250 324 198Z" fill="#f5f8fc" stroke="#275dcc" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M369 173 459 224M369 224 459 173" stroke="#ccd8e8" stroke-width="1.5"/>
+    <use href="#container" transform="translate(383 155) scale(.65)"/>
+    <use href="#container" transform="translate(444 189) scale(.65)"/>
+    <use href="#container" transform="translate(383 216) scale(.65)"/>
+    <g fill="#aa6715"><circle cx="399" cy="171" r="2.5"/><circle cx="460" cy="205" r="2.5"/><circle cx="399" cy="232" r="2.5"/></g>
   </g>
-  <g fill="#f5f8fc" stroke="#ccd8e8" stroke-width="2">
-    <rect x="714" y="193" width="146" height="43" rx="7"/>
-    <rect x="714" y="255" width="178" height="43" rx="7"/>
-    <rect x="912" y="236" width="90" height="62" rx="10" stroke="#275dcc" stroke-width="2.5"/>
-  </g>
-  <g font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#526680">
-    <text x="732" y="220">Containers</text>
-    <text x="732" y="282">Helm releases</text>
-  </g>
-  <g fill="#275dcc">
-    <rect x="930" y="253" width="12" height="12" rx="2"/>
-    <rect x="952" y="253" width="12" height="12" rx="2"/>
-    <rect x="974" y="253" width="12" height="12" rx="2"/>
-    <rect x="930" y="276" width="12" height="6" rx="2" opacity=".5"/>
-    <rect x="952" y="276" width="12" height="6" rx="2" opacity=".5"/>
-    <rect x="974" y="276" width="12" height="6" rx="2" opacity=".5"/>
-  </g>
-  <circle cx="981" cy="111" r="4" fill="#aa6715"/>
 </svg>
